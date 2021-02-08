@@ -63,15 +63,15 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 840000;
+        consensus.nSubsidyHalvingInterval = 540000;
         consensus.BIP16Height = 0; // b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8");
         consensus.BIP65Height = 0; // b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8
         consensus.BIP66Height = 0; // 7b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
-        consensus.nPowTargetTimespan = 1 * 3 * 60 * 60; // 3 hours
-        consensus.nPowTargetSpacing = 0.5 * 60; // 30
+        consensus.nPowTargetTimespan = 10 * 60; //10 minutes
+        consensus.nPowTargetSpacing = 0.5 * 60; // 30 seconds
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 6048; // 75% of 8064
@@ -168,8 +168,8 @@ public:
         consensus.BIP34Hash = uint256S("8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573");
         consensus.BIP65Height = 0; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
         consensus.BIP66Height = 0; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
-        consensus.nPowTargetTimespan = 1 * 3 * 60 * 60; // 3 hours
-        consensus.nPowTargetSpacing = 0.5 * 60; // 30
+        consensus.nPowTargetTimespan = 10 * 60; //10 minutes
+        consensus.nPowTargetSpacing = 0.5 * 60; // 30 seconds
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
@@ -262,8 +262,8 @@ public:
         consensus.BIP65Height = 1351; // BIP65 activated on regtest (Used in functional tests)
         consensus.BIP66Height = 1251; // BIP66 activated on regtest (Used in functional tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 1 * 3 * 60 * 60; // 3 hours
-        consensus.nPowTargetSpacing = 0.5 * 60; // 30
+        consensus.nPowTargetTimespan = 10 * 60; //10 minutes
+        consensus.nPowTargetSpacing = 0.5 * 60; // 30 seconds
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for testchains
