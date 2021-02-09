@@ -105,7 +105,7 @@ public:
         pchMessageStart[1] = 0xb3;
         pchMessageStart[2] = 0x62;
         pchMessageStart[3] = 0x20;
-        nDefaultPort = 9333;
+        nDefaultPort = 9696;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 22;
         m_assumed_chain_state_size = 3;
@@ -120,7 +120,7 @@ public:
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed-a.litecoin.loshan.co.uk");
+        vSeeds.emplace_back("seed-a.africoin.loshan.co.uk");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,7);
@@ -129,7 +129,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x66, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x66, 0xAD, 0xE4};
 
-        bech32_hrp = "ltc";
+        bech32_hrp = "afc";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
@@ -198,7 +198,7 @@ public:
         pchMessageStart[1] = 0xc8;
         pchMessageStart[2] = 0x6a;
         pchMessageStart[3] = 0x5b;
-        nDefaultPort = 19335;
+        nDefaultPort = 19696;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
@@ -211,7 +211,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.litecointools.com");
+        vSeeds.emplace_back("testnet-seed.africointools.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
@@ -220,7 +220,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "tltc";
+        bech32_hrp = "tafc";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
@@ -324,7 +324,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "rltc";
+        bech32_hrp = "rafc";
 
         /* enable fallback fee on regtest */
         m_fallback_fee_enabled = true;
