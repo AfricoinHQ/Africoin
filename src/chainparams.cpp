@@ -293,7 +293,7 @@ public:
 
         UpdateVersionBitsParametersFromArgs(args);
 
-        genesis = CreateGenesisBlock(1610694000, 0, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1610694000, 0, 0x207ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0xca951d4fc67e4946bdc7abcb32c8ab38a456b94ea22905501dda532ed063bd9e"));
         assert(genesis.hashMerkleRoot == uint256S("0xa6e3711df9629b8e4467ddb521be718096db5f63b34d6522264b00fbdc19bc45"));
