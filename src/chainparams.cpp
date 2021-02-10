@@ -51,7 +51,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Africoin has became a reality instead of an idea.";
+    const char* pszTimestamp = "Jan 15 2021 Africoin was born.";
     const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -64,11 +64,11 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 540000;
-        consensus.BIP16Height = 0; // b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8
+        consensus.BIP16Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8");
-        consensus.BIP65Height = 0; // b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8
-        consensus.BIP66Height = 0; // 7b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8
+        consensus.BIP34Hash = uint256S("cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708");
+        consensus.BIP65Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
+        consensus.BIP66Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
         consensus.nPowTargetTimespan = 10 * 60; //10 minutes
         consensus.nPowTargetSpacing = 0.5 * 60; // 30 seconds
@@ -110,10 +110,10 @@ public:
         m_assumed_blockchain_size = 22;
         m_assumed_chain_state_size = 3;
 
-        genesis = CreateGenesisBlock(1610694000, 2084524493, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1610694000, 971517, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"));
-        assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+        assert(consensus.hashGenesisBlock == uint256S("0xcc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708"));
+        assert(genesis.hashMerkleRoot == uint256S("0xa6e3711df9629b8e4467ddb521be718096db5f63b34d6522264b00fbdc19bc45"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
