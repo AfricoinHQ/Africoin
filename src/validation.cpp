@@ -1160,19 +1160,15 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 
     CAmount nSubsidy = 50 * COIN;
         //sets the premine to 20 million coins then awards the next 100 miners
-    if(nHeight == 2)  
+    if(nHeight > 300)  
     {
-        nSubsidy = 14000600 * COIN;
+        nSubsidy = 1000000 * COIN;
     }
-    else if(nHeight > 25)  
+    else if(nHeight >= 800)  
     {
         nSubsidy = 5000 * COIN;
     }
-    else if(nHeight > 50)  
-    {
-        nSubsidy = 2500 * COIN;
-    }
-    else if(nHeight > 100)  
+    else
     {
         nSubsidy = 50 * COIN;
     }
