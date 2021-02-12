@@ -91,7 +91,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
+        consensus.nMinimumChainWork = uint256S("0xff33de5588ac4dde60969754db50a0c24812012d4df0d39f5bcc8b5190f94979");
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0xb34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8"); //1683528
@@ -121,6 +121,7 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         vSeeds.emplace_back("68.183.132.123");
+        vSeeds.emplace_back("178.62.124.129");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,7);
@@ -140,14 +141,16 @@ public:
         checkpointData = {
             {
                 {  0, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
+                { 344, uint256S("0xff33de5588ac4dde60969754db50a0c24812012d4df0d39f5bcc8b5190f94979")},
+                { 449, uint256S("0xd98f0e027d9d479cf1941978b5770e44912364311b14047edfc61b53d7f1fcdc")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from rpc: getchaintxstats 4096 2cdba8c47858d34cf0e02dfb8733263a3ed8705b1663ec7c158783d77b93e7ee
-            /* nTime    */ 1610694000,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0.0
+            // Data from rpc: getchaintxstats
+            /* nTime    */ 1613137682,
+            /* nTxCount */ 458,
+            /* dTxRate  */ 0.003060361605884485
         };
 
         /* disable fallback fee on mainnet */
@@ -212,6 +215,7 @@ public:
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
         vSeeds.emplace_back("68.183.132.123");
+        vSeeds.emplace_back("178.62.124.129");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
