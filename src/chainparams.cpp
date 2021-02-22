@@ -89,7 +89,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1685561600; // Wed May 31 2023 19:33:20 GMT+0000
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1717156798; // Fri May 31 2024 11:59:58 GMT+0000
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0xff33de5588ac4dde60969754db50a0c24812012d4df0d39f5bcc8b5190f94979");
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000002b5003e1");
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0xb34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8"); //1683528
@@ -141,14 +141,15 @@ public:
                 {  0, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
                 { 344, uint256S("0xff33de5588ac4dde60969754db50a0c24812012d4df0d39f5bcc8b5190f94979")},
                 { 449, uint256S("0xd98f0e027d9d479cf1941978b5770e44912364311b14047edfc61b53d7f1fcdc")},
+                { 692, uint256S("0xfb2ca20a6cd31e956b7bfb3aacf0212781c3852eedc3744c2efed1aebfb64c61")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data from rpc: getchaintxstats
-            /* nTime    */ 1613137682,
-            /* nTxCount */ 458,
-            /* dTxRate  */ 0.003060361605884485
+            /* nTime    */ 1613863841,
+            /* nTxCount */ 693,
+            /* dTxRate  */ 0.0009423296953861302
         };
 
         /* disable fallback fee on mainnet */
