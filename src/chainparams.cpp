@@ -65,10 +65,10 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 540000;
         consensus.BIP16Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
-        consensus.BIP34Height = 0;
+        consensus.BIP34Height = 1;
         consensus.BIP34Hash = uint256S("cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708");
-        consensus.BIP65Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
-        consensus.BIP66Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
+        consensus.BIP65Height = 1; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
+        consensus.BIP66Height = 1; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
         consensus.nPowTargetTimespan = 10 * 60; //10 minutes
         consensus.nPowTargetSpacing = 0.5 * 60; // 30 seconds
