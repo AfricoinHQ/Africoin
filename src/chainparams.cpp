@@ -65,10 +65,10 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 540000;
         consensus.BIP16Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
-        consensus.BIP34Height = 1;
+        consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708");
-        consensus.BIP65Height = 1; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
-        consensus.BIP66Height = 1; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
+        consensus.BIP65Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
+        consensus.BIP66Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
         consensus.nPowTargetTimespan = 10 * 60; //10 minutes
         consensus.nPowTargetSpacing = 0.5 * 60; // 30 seconds
@@ -139,17 +139,20 @@ public:
         checkpointData = {
             {
                 {  0, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
-                { 344, uint256S("0xff33de5588ac4dde60969754db50a0c24812012d4df0d39f5bcc8b5190f94979")},
-                { 449, uint256S("0xd98f0e027d9d479cf1941978b5770e44912364311b14047edfc61b53d7f1fcdc")},
-                { 692, uint256S("0xfb2ca20a6cd31e956b7bfb3aacf0212781c3852eedc3744c2efed1aebfb64c61")},
+                // { 344, uint256S("0xff33de5588ac4dde60969754db50a0c24812012d4df0d39f5bcc8b5190f94979")},
+                // { 449, uint256S("0xd98f0e027d9d479cf1941978b5770e44912364311b14047edfc61b53d7f1fcdc")},
+                // { 692, uint256S("0xfb2ca20a6cd31e956b7bfb3aacf0212781c3852eedc3744c2efed1aebfb64c61")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from rpc: getchaintxstats
-            /* nTime    */ 1613863841,
-            /* nTxCount */ 693,
-            /* dTxRate  */ 0.0009423296953861302
+            // // Data from rpc: getchaintxstats
+            // /* nTime    */ 1613863841,
+            // /* nTxCount */ 693,
+            // /* dTxRate  */ 0.0009423296953861302
+            /* nTime    */ 1610694000,
+            /* nTxCount */ 0,
+            /* dTxRate  */ 0.0
         };
 
         /* disable fallback fee on mainnet */
