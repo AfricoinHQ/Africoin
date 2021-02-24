@@ -89,7 +89,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1685561600; // Wed May 31 2023 19:33:20 GMT+0000
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1717156798; // Fri May 31 2024 11:59:58 GMT+0000
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000002b5003e1");
+        //consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000002b5003e1");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0xb34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8"); //1683528
@@ -105,7 +106,7 @@ public:
         pchMessageStart[3] = 0x20;
         nDefaultPort = 9696;
         nPruneAfterHeight = 100000;
-        m_assumed_blockchain_size = 22;
+        m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 3;
 
         genesis = CreateGenesisBlock(1610694000, 971517, 0x1e0ffff0, 1, 50 * COIN);
@@ -150,7 +151,8 @@ public:
             // /* nTime    */ 1613863841,
             // /* nTxCount */ 693,
             // /* dTxRate  */ 0.0009423296953861302
-            /* nTime    */ 1610694000,
+           // /* nTime    */ 1610694000,
+            /* nTime    */ 0,
             /* nTxCount */ 0,
             /* dTxRate  */ 0.0
         };
@@ -320,7 +322,7 @@ public:
         chainTxData = ChainTxData{
             0,
             0,
-            0
+            0.0
         };
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
