@@ -47,7 +47,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Africoin"
-#define QAPP_ORG_DOMAIN "africoin.org"
+#define QAPP_ORG_DOMAIN "africoin.me"
 #define QAPP_APP_NAME_DEFAULT "Africoin-Qt"
 #define QAPP_APP_NAME_TESTNET "Africoin-Qt-testnet"
 #define QAPP_APP_NAME_REGTEST "Africoin-Qt-regtest"

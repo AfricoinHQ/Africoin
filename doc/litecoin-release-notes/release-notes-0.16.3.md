@@ -1,6 +1,6 @@
 Africoin Core version 0.16.3 is now available from:
 
-  <https://download.africoin.org/africoin-0.16.3/>
+  <https://download.africoin.me/africoin-0.16.3/>
 
 This is a new minor version release, with various bugfixes
 as well as updated translations.
