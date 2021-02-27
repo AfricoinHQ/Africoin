@@ -3,7 +3,7 @@ Africoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/AfricoinHQ/africoin.svg?branch=master)](https://travis-ci.org/AfricoinHQ/africoin)
 
-https://africoin.org
+https://africoin.me
 
 What is Africoin?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. Africoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Africoin Core software, see [https://africoin.org](https://africoin.org).
+the Africoin Core software, see [https://africoin.me](https://africoin.me).
 
 License
 -------
@@ -78,3 +78,5 @@ Translations are periodically pulled from Transifex and merged into the git repo
 
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
+
+africoin:afc1q3eh5p3t4amn6c4llaxh86veq5dk4fud8cmxx6t
