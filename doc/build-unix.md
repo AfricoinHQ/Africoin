@@ -59,7 +59,7 @@ memory available when compiling Africoin Core. On systems with less, gcc can be
 tuned to conserve memory with additional CXXFLAGS:
 
 
-    ./configure CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768"
+    ./configure CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --without-gui
 
 
 ## Linux Distribution Specific Instructions
