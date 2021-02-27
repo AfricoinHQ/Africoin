@@ -63,6 +63,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
+        //halving takes place every 20 blocks nPowTargetTimespan/nPowTargetSpacing
         consensus.nSubsidyHalvingInterval = 540000;
         consensus.BIP16Height = 0; // cc0e052fe8035a2f13efb438509565135abc24978232da976c6707e9ad657708
         consensus.BIP34Height = 0;
@@ -74,8 +75,8 @@ public:
         consensus.nPowTargetSpacing = 0.5 * 60; // 30 seconds
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
-        consensus.nRuleChangeActivationThreshold = 6048; // 75% of 8064
-        consensus.nMinerConfirmationWindow = 8064; // nPowTargetTimespan / nPowTargetSpacing * 4
+        consensus.nRuleChangeActivationThreshold = 6048; // 75% of 8064 =60
+        consensus.nMinerConfirmationWindow = 8064; // nPowTargetTimespan / nPowTargetSpacing * 4 = 80
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
@@ -140,6 +141,7 @@ public:
         checkpointData = {
             {
                 {  0, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
+                { 11, uint256S("0x2af2d9d95b6e737dd23b8a4c7cda4d2b591866b75dec8c1a909ae99e677c5e70")},
                 // { 344, uint256S("0xff33de5588ac4dde60969754db50a0c24812012d4df0d39f5bcc8b5190f94979")},
                 // { 449, uint256S("0xd98f0e027d9d479cf1941978b5770e44912364311b14047edfc61b53d7f1fcdc")},
                 // { 692, uint256S("0xfb2ca20a6cd31e956b7bfb3aacf0212781c3852eedc3744c2efed1aebfb64c61")},
@@ -152,9 +154,9 @@ public:
             // /* nTxCount */ 693,
             // /* dTxRate  */ 0.0009423296953861302
            // /* nTime    */ 1610694000,
-            /* nTime    */ 0,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0.0
+            /* nTime    */ 1614173940,
+            /* nTxCount */ 12,
+            /* dTxRate  */ 0.001164008846467233
         };
 
         /* disable fallback fee on mainnet */
