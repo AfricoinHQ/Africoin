@@ -90,10 +90,11 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1685561600; // Wed May 31 2023 19:33:20 GMT+0000
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1717156798; // Fri May 31 2024 11:59:58 GMT+0000
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000002e0015a");//45
+        //consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000002b5003e1");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000013a00266");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x791e9b738580a571b8b4145901aef50e3c374da0e0c96934773364d38f712d9f"); //45
+        consensus.defaultAssumeValid = uint256S("0xd3f9f043527683bc80272df599bf41aeac0c27368a3471d1d09a3113d222ec71"); //313
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -140,15 +141,20 @@ public:
         checkpointData = {
             {
                 {  0, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
+                { 11, uint256S("0x2af2d9d95b6e737dd23b8a4c7cda4d2b591866b75dec8c1a909ae99e677c5e70")},
                 { 45, uint256S("0x791e9b738580a571b8b4145901aef50e3c374da0e0c96934773364d38f712d9f")},
+                { 313, uint256S("0xd3f9f043527683bc80272df599bf41aeac0c27368a3471d1d09a3113d222ec71")},
             }
         };
 
         chainTxData = ChainTxData{
             // // Data from rpc: getchaintxstats
-            /* nTime    */ 1614398355,
-            /* nTxCount */ 48,
-            /* dTxRate  */ 0.0001830889493878461
+            // /* nTime    */ 1613863841,
+            // /* nTxCount */ 693,
+            // /* dTxRate  */ 0.0009423296953861302
+            /* nTime    */ 1615517779,
+            /* nTxCount */ 360,
+            /* dTxRate  */ 0.0002629020271361891
         };
 
         /* disable fallback fee on mainnet */
