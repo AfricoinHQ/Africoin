@@ -90,11 +90,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1685561600; // Wed May 31 2023 19:33:20 GMT+0000
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1717156798; // Fri May 31 2024 11:59:58 GMT+0000
         // The best chain should have at least this much work.
-        //consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000002b5003e1");
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000013a00266");
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000002dd00409");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0xd3f9f043527683bc80272df599bf41aeac0c27368a3471d1d09a3113d222ec71"); //313
+        consensus.defaultAssumeValid = uint256S("0x6a8cfdaa4eaa5d1e857db6c88cc9f8f338c9a1929eee4117a59164d3b1aa9bcb"); //313
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -144,17 +143,14 @@ public:
                 { 11, uint256S("0x2af2d9d95b6e737dd23b8a4c7cda4d2b591866b75dec8c1a909ae99e677c5e70")},
                 { 45, uint256S("0x791e9b738580a571b8b4145901aef50e3c374da0e0c96934773364d38f712d9f")},
                 { 313, uint256S("0xd3f9f043527683bc80272df599bf41aeac0c27368a3471d1d09a3113d222ec71")},
+                { 732, uint256S("0x6a8cfdaa4eaa5d1e857db6c88cc9f8f338c9a1929eee4117a59164d3b1aa9bcb")},
             }
         };
 
         chainTxData = ChainTxData{
-            // // Data from rpc: getchaintxstats
-            // /* nTime    */ 1613863841,
-            // /* nTxCount */ 693,
-            // /* dTxRate  */ 0.0009423296953861302
-            /* nTime    */ 1615517779,
-            /* nTxCount */ 360,
-            /* dTxRate  */ 0.0002629020271361891
+            /* nTime    */ 1616194249,
+            /* nTxCount */ 802,
+            /* dTxRate  */ 0.0003908498149814688
         };
 
         /* disable fallback fee on mainnet */
@@ -185,15 +181,14 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
-        // Deployment of BIP68, BIP112, and BIP113.
+ // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1483228800; // January 1, 2017
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1517356801; // January 31st, 2018
-
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1685561600; // Wed May 31 2023 19:33:20 GMT+0000
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1717156798; // Fri May 31 2024 11:59:58 GMT+0000
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1483228800; // January 1, 2017
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1685561600; // Wed May 31 2023 19:33:20 GMT+0000
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1717156798; // Fri May 31 2024 11:59:58 GMT+0000
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
